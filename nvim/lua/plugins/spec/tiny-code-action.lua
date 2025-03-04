@@ -10,7 +10,7 @@ return {
 
     map({ "n", "v" }, "<leader>ca", function()
       require("tiny-code-action").code_action()
-    end, { desc = "Tiny code action" })
+    end, { desc = "Tiny code action | Quickfix" })
 
     require("tiny-code-action").setup()
   end,

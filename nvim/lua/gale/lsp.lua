@@ -14,7 +14,7 @@ local on_attach = function(_, bufnr)
   end
 
   map("n", "<leader>gd", vim.lsp.buf.definition, { desc = "LSP go to definition", noremap = true, silent = true })
-  map("n", "gi", vim.lsp.buf.implementation, { desc = "LSP go to implementation" })
+  map("n", "<leader>gi", vim.lsp.buf.implementation, { desc = "LSP go to implementation" })
   -- map("n", "<leader>gd", vim.lsp.buf.declaration, { desc = "LSP go to declaration" })
   map("n", "<leader>sh", vim.lsp.buf.signature_help, { desc = "LSP show signature help" })
   map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { desc = "LSP add workspace folder" })

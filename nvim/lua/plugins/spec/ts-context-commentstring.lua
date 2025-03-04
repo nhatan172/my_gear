@@ -21,6 +21,7 @@ return {
     "glimmer",
     "handlebars",
     "hbs",
+    "blade",
   },
   config = function()
     ---@diagnostic disable-next-line

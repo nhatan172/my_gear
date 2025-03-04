@@ -2,6 +2,9 @@ vim.filetype.add {
   extension = {
     jsonl = "json",
   },
+  pattern = {
+    [".*%.blade%.php"] = "blade",
+  },
 }
 
 vim.api.nvim_create_autocmd("FileType", {

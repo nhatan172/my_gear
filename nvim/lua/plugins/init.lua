@@ -77,10 +77,12 @@ return {
   { import = "plugins.override.telescope" },
   { import = "plugins.override.ui" },
   { import = "plugins.override.whichkey" },
-
+  
   { import = "plugins.spec.ai-avante" },
-
+  
   { import = "plugins.spec.nvim-tmux-navigation" },
   { import = "plugins.spec.catppuccin" },
-  { import = "plugins.spec.nvim-comment"}
+  { import = "plugins.spec.nvim-comment"},
+
+  { import = "plugins.local.copilot"}
 }

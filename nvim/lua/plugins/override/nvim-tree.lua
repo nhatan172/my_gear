@@ -7,6 +7,7 @@ return {
   lazy = false,
   init = function()
     vim.keymap.set("n", "<C-a>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+    vim.keymap.set("n", "<leader>tf", "<cmd>NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
   end,
   config = function()
     dofile(vim.g.base46_cache .. "nvimtree")
@@ -185,6 +186,7 @@ return {
       map("n", "+", api.tree.change_root_to_node, opts "CD")
       map("n", "?", api.tree.toggle_help, opts "Help")
       map("n", "<ESC>", api.tree.close, opts "Close")
+
       -- custom mappings
       map('n', '<C-t>', api.tree.change_root_to_parent, opts('Up'))
 
@@ -195,7 +197,6 @@ return {
     end
 
     local path_sep = package.config:sub(1, 1)
-
     local function trim_sep(path)
       return path:gsub(path_sep .. "$", "")
     end
@@ -358,3 +359,33 @@ return {
     }
   end,
 }
+
+-- Navigation
+-- j / k	Move up/down
+-- l or <CR> (Enter)	Open file/directory
+-- h	Close directory
+-- o	Open file or expand directory
+-- P	Go to parent directory
+-- H	Toggle hidden files
+-- TAB	Preview file (keep Nvim-Tree open)
+-- I	Toggle git ignored files
+-- R	Refresh tree
+
+-- 📁 File/Folder Operations
+-- Key	Action
+-- a	Create a new file/folder
+-- r	Rename file/folder
+-- x	Cut (move) file
+-- c	Copy file
+-- p	Paste file (after cut/copy)
+-- d	Delete file/folder
+-- y	Copy filename to clipboard
+-- Y	Copy relative path to clipboard
+-- gy	Copy absolute path to clipboard
+
+-- 🔍 Git Integration
+-- Key	Action
+-- g?	Show Git help
+-- g	Show Git status
+-- C	Collapse all directories
+-- m	Toggle file marking

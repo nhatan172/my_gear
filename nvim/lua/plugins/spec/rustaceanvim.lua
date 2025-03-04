@@ -27,7 +27,7 @@ return {
             "n",
             "<leader>ca",
             "<cmd>lua vim.cmd.RustLsp('codeAction')<CR>",
-            { buffer = bufnr, desc = "Rust Code actions" }
+            { buffer = bufnr, desc = "Rust Code actions | Quickfix" }
           )
         end,
         default_settings = {

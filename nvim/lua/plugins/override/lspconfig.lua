@@ -21,7 +21,6 @@ return {
       clangd = {},
       css_variables = {},
       cssls = {},
-      -- eslint = {},
       html = {},
       hls = {},
       gopls = {},
@@ -32,7 +31,6 @@ return {
             hint = { enable = true },
             telemetry = { enable = false },
             diagnostics = { globals = { "bit", "vim", "it", "describe", "before_each", "after_each" } },
-            -- workspace libraries are set via lazydev
           },
         },
       },
@@ -47,7 +45,6 @@ return {
         end,
       },
       somesass_ls = {},
-      -- tailwindcss = {},
       taplo = {},
       vtsls = {
         settings = {
@@ -72,11 +69,9 @@ return {
             },
           },
         },
-
       },
       yamlls = {},
       zls = {},
-
       intelephense = {
         settings = {
           intelephense = {
@@ -88,6 +83,22 @@ return {
             },
           },
         },
+      },
+
+      solidity = {
+        cmd = { "solidity-ls", "--stdio" }, -- Ensure solidity-ls is installed globally
+        filetypes = { "solidity" },
+        root_dir = lspconfig.util.find_git_ancestor, -- Finds the nearest git project root
+        settings = {
+          solidity = {
+            includePath = "", -- Adjust if you have custom libraries
+            remapping = {},   -- Optional remapping configuration for Solidity
+          },
+        },
+        on_attach = function(client, bufnr)
+          -- Additional logic during attachment (if needed)
+          print("Solidity LSP attached!")
+        end,
       },
     }
 

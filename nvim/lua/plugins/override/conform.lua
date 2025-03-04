@@ -31,6 +31,7 @@ return {
       toml = { "taplo" },
       yaml = { "yamlfmt" },
       zig = { "zigfmt" },
+      blade = { "blade-formatter" }
     },
     -- Set the log level. Use `:ConformInfo` to see the location of the log file.
     log_level = vim.log.levels.ERROR,
