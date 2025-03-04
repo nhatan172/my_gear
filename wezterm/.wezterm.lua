@@ -12,23 +12,23 @@ return {
   hide_tab_bar_if_only_one_tab = true,   -- Hide tab bar if only one tab is open
   window_background_opacity = 0.9,       -- Transparency (set to 1.0 for no transparency)
   text_background_opacity = 1.0,         -- Ensures text is opaque
-  window_decorations = "RESIZE",         -- Minimal decorations for a modern look
+  window_decorations = "TITLE | RESIZE",         -- Minimal decorations for a modern look
 
   -- Add Background Image
-  background = {
-    -- Path to the image (absolute or relative to the config directory)
-    {
-      source = {
-        File = '/Users/tannn/Downloads/small_memory.jpg', -- Replace with the actual image path
-      },
-      -- opacity = 0.5,    -- Adjust opacity of the image (0.0 to 1.0)
-      hsb = {
-        brightness = 0.2, -- Adjust brightness (0.0 to 1.0)
-        hue = 1.0,        -- Adjust hue (1.0 keeps the original color)
-        saturation = 1.0, -- Adjust saturation (1.0 keeps the original saturation)
-      },
-    },
-  },
+  -- background = {
+  --   -- Path to the image (absolute or relative to the config directory)
+  --   {
+  --     source = {
+  --       File = '/Users/tannn/Downloads/small_memory.jpg', -- Replace with the actual image path
+  --     },
+  --     -- opacity = 0.5,    -- Adjust opacity of the image (0.0 to 1.0)
+  --     hsb = {
+  --       brightness = 0.2, -- Adjust brightness (0.0 to 1.0)
+  --       hue = 1.0,        -- Adjust hue (1.0 keeps the original color)
+  --       saturation = 1.0, -- Adjust saturation (1.0 keeps the original saturation)
+  --     },
+  --   },
+  -- },
 
   -- Padding around the terminal
   window_padding = {
